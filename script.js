@@ -40,3 +40,14 @@ div.addEventListener("click", function() {
 
 });
 
+// HYDRA BUTTON
+var numclicks = 1;
+
+function dupe() {
+	for(var i=0; i < numclicks; i++) {
+		var d1 = document.getElementById('btngrp');
+		d1.insertAdjacentHTML('beforeend', '<button id="btn" type="submit" onclick="dupe();">CUT OFF THE HEAD!</button>');
+	}
+	numclicks = numclicks * 2;
+}
+
