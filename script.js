@@ -22,8 +22,7 @@ paraOne.addEventListener("dblclick", function(){
 // mouse enter listener sets innerText of paragraph three to innerText of paragraph two
 paraTwo.addEventListener("mouseenter", function(){
 
-	let newTxt = paraTwo.innerText;
-	paraThree.innerText = newTxt;
+	paraThree.innerText = paraTwo.innerText;
 
 });
 
@@ -37,9 +36,7 @@ paraTwo.addEventListener("mouseleave", function(){
 // click listener on the div containing the fourth paragraph finds and replaces one instance of "cliche" within paragraph four with "hipster" per click
 div.addEventListener("click", function() {
 
-	let orig = paraFour.innerText;
-	let newTxt = orig.replace("cliche", "hipster");
-	paraFour.innerText = newTxt;
+	paraFour.innerText = paraFour.innerText.replace("cliche", "hipster");
 
 });
 
