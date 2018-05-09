@@ -5,19 +5,21 @@ let paraThree = document.getElementById("three");
 let paraThreeSave = document.getElementById("three").innerText;
 let paraFour = document.getElementById("four");
 
-
+// click listener changes color of first paragraph
 paraOne.addEventListener("click", function(){
 
 	paraOne.style.color = "red";
 
 });
 
+// doubleclick listener changes size of first paragraph
 paraOne.addEventListener("dblclick", function(){
 
 	paraOne.style.fontSize = "20px";
 
 });
 
+// mouse enter listener sets innerText of paragraph three to innerText of paragraph two
 paraTwo.addEventListener("mouseenter", function(){
 
 	let newTxt = paraTwo.innerText;
@@ -25,13 +27,14 @@ paraTwo.addEventListener("mouseenter", function(){
 
 });
 
+// mouse leave event resets paragraph three innerText to original value
 paraTwo.addEventListener("mouseleave", function(){
 
 	paraThree.innerText = paraThreeSave;
 
 });
 
-
+// click listener on the div containing the fourth paragraph finds and replaces one instance of "cliche" within paragraph four with "hipster" per click
 div.addEventListener("click", function() {
 
 	let orig = paraFour.innerText;
